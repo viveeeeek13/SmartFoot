@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --surface: #ffffff;
+    --border: #e2e8f0;
+    --secondary: #64748b;
+    --muted: #f1f5f9;
+    --primary: #10b981;
+    --danger: #ef4444;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #020617;
+        --foreground: #f8fafc;
+        --surface: #0f172a;
+        --border: #1e293b;
+        --secondary: #94a3b8;
+        --muted: #1e293b;
+        --primary: #10b981;
+        --danger: #ef4444;
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+}
+@layer components {
+    .input {
+        @apply w-full px-4 py-3 bg-slate-900/50 border border-slate-800 rounded-xl focus:border-emerald-500 focus:outline-none transition-all text-slate-100 placeholder:text-slate-600;
+    }
+
+    .btn {
+        @apply px-6 py-3 rounded-xl font-bold transition-all active:scale-95 flex items-center justify-center gap-2;
+    }
+
+    .btn-primary {
+        @apply bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-lg shadow-emerald-500/20 disabled:opacity-50;
+    }
+
+    .btn-secondary {
+        @apply bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 disabled:opacity-50;
+    }
+
+    .hover-lift {
+        @apply hover:-translate-y-0.5 transition-transform;
+    }
+}
