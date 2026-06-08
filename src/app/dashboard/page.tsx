@@ -165,7 +165,7 @@ export default function Dashboard() {
                 placeholder="0"
                 value={form.weight}
                 onChange={handleChange}
-                className="w-full bg-slate-950/50 border border-slate-700 rounded-2xl px-5 py-4 focus:border-emerald-500 focus:outline-none transition-all text-xl font-mono text-emerald-100"
+                // className="w-full bg-slate-950/50 border border-slate-700 rounded-2xl px-5 py-4 focus:border-emerald-500 focus:outline-none transition-all text-xl font-mono text-emerald-100"
               />
             </div>
             <div className="group">
